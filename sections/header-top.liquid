@@ -1,0 +1,49 @@
+<div class="header_top">
+     <div class="header_top_left">
+          <ul>
+               <li class="mail_list">
+                    {{ section.settings.mail_list }}
+               </li>
+               <li class="phone_list">
+                    {{ section.settings.phone_list }}
+               </li>
+          </ul>
+     </div>
+     <div class="header_top_right">
+          {% comment %} right area {% endcomment %}
+          <select>
+               <option class="lang_">
+                    {{section.settings.lang_}}
+               </option>
+               <option class="lang_">
+                    {{section.settings.lang_}}
+               </option>
+               <option class="lang_">
+                    {{section.settings.lang_}}
+               </option>
+               <option class="lang_">
+                    {{section.settings.lang_}}
+               </option>
+          </select>
+          <select>
+               <option class="currency">
+                    {{ section.settings.currency }}
+               </option>
+               <option class="currency">
+                    {{ section.settings.currency }}
+               </option>
+               <option class="currency">
+                    {{ section.settings.currency }}
+               </option>
+          </select>
+          <div class="login_status">
+               <span>{{ section.settings.login_status }}</span>
+               <img class="user_img" width="20px" height="20px" />
+          </div>
+          <div class="wishlist_status">
+               <span>{{ section.settings.wishlist_status }}</span>
+               <img class="user_img" width="20px" height="20px" />
+          </div>
+          <img class="user_img" width="20px" height="20px" />
+     </div>
+</div>

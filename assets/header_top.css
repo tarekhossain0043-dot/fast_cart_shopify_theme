@@ -1,0 +1,14 @@
+.header_top {
+  display: flex;
+  align-items: center;
+  background-color: #7e33e0;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.header_top_right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
