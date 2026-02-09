@@ -1,0 +1,39 @@
+{{conponents.css | asset_url | stylesheet_tag}}
+
+<div class="hero-wrapper section-{{ section.id }}">
+  <div class="hero-container">
+    <div class="hero-content">
+      <p class="hero-subtitle">{{ section.settings.subtitle }}</p>
+      <h1 class="hero-title">{{ section.settings.title }}</h1>
+      <p class="hero-desc">{{section.settings.desc}}</p>
+      <div class="hero-buttons">
+        <a href="{{ section.settings.button_link }}" class="btn btn-primary">{{ section.settings.button_label }}</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      {% if section.settings.image != blank %}
+        <img src="{{ section.settings.image | img_url: '1200x' }}" alt="{{ section.settings.title }}">
+      {% else %}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "conponents",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Hero Image" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "Modern Collection 2026" },
+    { "type": "textarea", "id": "subtitle", "label": "Sub-heading", "default": "Exclusive designs for your personality." },
+    { "type": "text", "id": "button_label", "label": "Button Label", "default": "Shop Now" },
+    { "type": "url", "id": "button_link", "label": "Button Link" },
+    { "type": "color", "id": "bg_color", "label": "Background Color", "default": "#f5f5f5" }
+  ],
+  "presets": [
+    { "name": "conponents" }
+  ]
+}
+{% endschema %}
