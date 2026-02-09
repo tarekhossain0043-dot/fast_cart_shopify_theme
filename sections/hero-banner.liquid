@@ -12,7 +12,7 @@
     </div>
     <div class="hero-image">
       {% if section.settings.image != blank %}
-        {% comment %} <img src="{{ section.settings.image | img_url: '1200x' }}" alt="{{ section.settings.title }}"> {% endcomment %}
+        <img src="{{ section.settings.image | img_url: '1200px' }}" alt="{{ section.settings.title }}" width="500px" height="500px">
       {% else %}
         {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
       {% endif %}
@@ -26,8 +26,9 @@
   "name": "conponents",
   "settings": [
     { "type": "image_picker", "id": "image", "label": "Hero Image" },
-    { "type": "text", "id": "title", "label": "Heading", "default": "Modern Collection 2026" },
     { "type": "textarea", "id": "subtitle", "label": "Sub-heading", "default": "Exclusive designs for your personality." },
+    { "type": "text", "id": "title", "label": "Heading", "default": "Modern Collection 2026" },
+    {"type" : "text", "id" : "desc", "label" : "Paragraph", "default" : "lorem ipsum dollam some isset!"},
     { "type": "text", "id": "button_label", "label": "Button Label", "default": "Shop Now" },
     { "type": "url", "id": "button_link", "label": "Button Link" },
     { "type": "color", "id": "bg_color", "label": "Background Color", "default": "#f5f5f5" }

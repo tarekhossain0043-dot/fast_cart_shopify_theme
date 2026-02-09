@@ -47,3 +47,22 @@
           <img class="user_img" width="20px" height="20px" />
      </div>
 </div>
+
+{% comment %} schema {% endcomment %}
+
+{% schema %}
+{
+  "name": "header_top",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "header top image" },
+    { "type": "text", "id": "list", "label": "list", "default": "Modern Collection 2026" },
+    { "type": "textarea", "id": "subtitle", "label": "Sub-heading", "default": "Exclusive designs for your personality." },
+    { "type": "text", "id": "button_label", "label": "Button Label", "default": "Shop Now" },
+    { "type": "url", "id": "button_link", "label": "Button Link" },
+    { "type": "color", "id": "bg_color", "label": "Background Color", "default": "#f5f5f5" }
+  ],
+  "presets": [
+    { "name": "conponents" }
+  ]
+}
+{% endschema %}
